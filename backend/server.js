@@ -24,6 +24,11 @@ mongoose.connect(process.env.MONGO_URI)
 // All routes defined in orderRoutes will be prefixed with /api/orders
 app.use('/api/orders', orderRoutes);
 
+// Add a simple health check route
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Server is running' });
+});
+
 // ------------------- Serve Frontend -------------------
 app.use(express.static(path.join(__dirname, '..')));  // serve static files from project root
 
