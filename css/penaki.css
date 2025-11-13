@@ -613,8 +613,7 @@ nav a:hover {
 }
 
 .footer-social .email-address {
-    border-bottom: 1px solid white;
-    padding-bottom: 0.5rem;
+    text-decoration: underline;
     margin-bottom: 2rem;
     font-size: 1rem;
     color: var(--text-light);
