@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');  
 const orderRoutes = require('./routes/orderRoutes');
 
 // Load environment variables
@@ -22,6 +23,15 @@ mongoose.connect(process.env.MONGO_URI)
 // API Routes
 // All routes defined in orderRoutes will be prefixed with /api/orders
 app.use('/api/orders', orderRoutes);
+
+// ------------------- Serve Frontend -------------------
+app.use(express.static(path.join(__dirname, '..')));  // serve static files from project root
+
+// For the root URL, send index.html from project root
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
 
 // Start the server
 app.listen(port, () => {
