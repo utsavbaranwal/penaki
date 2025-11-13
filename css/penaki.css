@@ -1,0 +1,778 @@
+:root {
+    --dark-bg: #1a1a2e;
+    --purple-gradient: linear-gradient(135deg, #1e1a3b, #3c336b);
+    --button-gradient: linear-gradient(135deg, #4a90e2, #2e62a3);
+    --text-light: #ffffff;
+    --text-muted: #a0a0a0;
+    --container-bg: rgba(29, 26, 51, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 5%;
+    background-color: rgba(13, 12, 29, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-text {
+    flex: 1;
+}
+
+.logo-text img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 0;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--text-muted);
+}
+
+.hamburger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hero Slider */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(1.5);
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 70px;
+    height: 80px;
+}
+
+.slider-arrow svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+}
+
+.hero-slider:hover .slider-arrow {
+    opacity: 0.7;
+}
+
+.slider-arrow:hover {
+    opacity: 1;
+}
+
+.slider-arrow.prev {
+    left: 2rem;
+}
+
+.slider-arrow.next {
+    right: 2rem;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Scroll-controlled Video */
+.scroll-video-container {
+    height: 280vh; /* This determines the scroll duration. 4x viewport height. 300 for may -utsav */ 
+    position: relative;
+}
+
+.scroll-video-section {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.scroll-video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Scroll Fade Animation */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-text .scroll-fade.visible:nth-child(2) {
+    transition-delay: 1s;
+}
+
+.intro-text .scroll-fade.visible:nth-child(3) {
+    transition-delay: 2s;
+}
+
+/* Intro Text Section */
+.intro-text {
+    text-align: center;
+    padding: 8rem 2rem;
+}
+
+.intro-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.intro-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.intro-text h3 {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Products Section */
+.products-section {
+    padding: 4rem 5%;
+}
+
+.products-container {
+    background-color: var(--container-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-container > h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.product-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 15px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.show-more-btn {
+    background: var(--button-gradient);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.show-more-btn:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.about-intro {
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    color: var(--text-light);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.about-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-box {
+    flex: 1;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.about-box h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.about-box p {
+    line-height: 1.6;
+    color: var(--text-light);
+    font-size: 1.5rem;
+}
+
+.about-box .work-item {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    max-width: 900px; /* Match the how-we-work section width */
+    width: 100%; /* Ensures responsiveness on smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gradient-box {
+    background: var(--purple-gradient);
+}
+
+.black-box {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-box h2 {
+    font-size: 2rem;
+}
+
+/* How We Work Section */
+.how-we-work-section {
+    padding: 6rem 5%;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.how-we-work-section > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.work-item {
+    background-color: #d9d9d9;
+    color: #000;
+    border-radius: 15px;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-placeholder {
+    background-color: transparent;
+    border-radius: 15px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.video-placeholder video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-placeholder {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    text-align: left;
+    color: #333;
+    font-size: 1rem;
+}
+
+.text-placeholder h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.text-placeholder p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.quote-section {
+    padding: 0 5% 6rem 5%;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Footer */
+.site-footer {
+    padding: 4rem 5%;
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.chat-icon-container {
+    display: inline-block;
+    background-color: #000;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-logo {
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.footer-logo-svg {
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer-form {
+    flex-basis: 45%;
+}
+
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form form input,
+.footer-form form textarea {
+    background-color: #d9d9d9;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0.8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-form form .form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-form form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.file-upload-btn {
+    background: #d9d9d9;
+    color: #333;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.file-upload-btn:hover {
+    background-color: #c0c0c0;
+}
+
+#file-chosen {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer-logo .logo-icon {
+    position: static;
+}
+
+.footer-form .submit-btn {
+    background: var(--button-gradient);
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    align-self: flex-end;
+}
+
+.footer-form .submit-btn:hover {
+    transform: scale(1.05);
+}
+
+.footer-social {
+    flex-basis: 20%;
+    padding-left: 2rem;
+}
+
+.footer-social > p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer-social .email-address {
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #a88beb;
+}
+
+.social-icons svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .scroll-video-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .scroll-video-section video {
+        height: auto;
+    }
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    .logo-text {
+        flex: none;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .logo-icon {
+        /* Reverts to absolute positioning from desktop styles */
+        position: absolute;
+        transform: translateX(-50%);
+        margin-bottom: 0;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(29, 26, 51, 0.95);
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+    
+    nav a {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .intro-text h1 { font-size: 2.5rem; }
+    .intro-text h2 { font-size: 2rem; }
+    .intro-text h3 { font-size: 1.8rem; }
+
+    .products-container > h2 { font-size: 3rem; }
+    .product-info h3 { font-size: 1.6rem; }
+    .about-intro { font-size: 2rem; }
+    .about-box h2 { font-size: 2.2rem; }
+    .about-box p { font-size: 1.2rem; }
+    .how-we-work-section > h2 { font-size: 2.2rem; }
+
+    .product-item, .product-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .footer-column {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .footer-social {
+        padding-left: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text {
+        padding: 6rem 1rem;
+    }
+
+    .intro-text h1 {
+        font-size: 1.88rem;
+    }
+    .intro-text h2 {
+        font-size: 1.7rem;
+    }
+    .intro-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .products-container > h2 { font-size: 2.5rem; }
+    .product-info h3 { font-size: 1.4rem; }
+    .about-intro { font-size: 1.6rem; }
+    .about-box { padding: 2rem; }
+    .about-box h2 { font-size: 2rem; }
+    .about-box p { font-size: 1rem; }
+    .how-we-work-section > h2 { font-size: 2rem; }
+    .footer-title h2 {
+        font-size: 1.8rem;
+    }
+}

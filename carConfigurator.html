@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Configurator - Penaki Luxury</title>
+    <link rel="stylesheet" href="css/penaki.css">
+    <link rel="stylesheet" href="css/carConfigurator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1HRQZ4EBY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-Q1HRQZ4EBY');
+    </script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-text"><img src="img/penaki.png" alt="Penaki Luxury Logo"></a>
+        <a href="index.html" class="logo-icon">
+            <img src="img/texture logo.png" alt="Penaki Luxury Logo" width="80" height="80">
+        </a>
+        <nav>
+            <a href="products.html">Products</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#how-we-work">How We Work</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="checkout.html">My Cart</a>
+        </nav>
+        <button class="hamburger-menu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main class="configurator-container">
+        <div class="configurator-layout">
+            <div class="car-view-panel">
+                <div class="car-display-area">
+                    <div class="image-gallery-container">
+                        <div class="main-car-image">
+                            <img id="mainCarImage" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop" alt="Porsche 911">
+                            <button id="prevBtn" class="slider-arrow prev-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <button id="nextBtn" class="slider-arrow next-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                            <button class="view-360-btn">Open 360° View</button>
+                        </div>
+                        <div class="thumbnail-gallery">
+                        
+                        </div>
+                    </div>
+                    <div class="options-group color-selection-panel">
+                        <div class="color-column">
+                            <div class="options-header">
+                                <h3>Standard Colors</h3>
+                            </div>
+                            <div class="color-options">
+                                <div class="color-swatch-container active">
+                                    <div class="color-swatch" style="background-color: white; border: 1px solid #ccc;" data-color="white"></div>
+                                    <p>White</p>
+                                    
+                                </div>
+                                <div class="color-swatch-container">
+                                    <div class="color-swatch" style="background-color: black;" data-color="black"></div>
+                                    <p>Black</p>
+                                </div>
+                                <div class="color-swatch-container">
+                                    <div class="color-swatch" style="background-color: #222;" data-color="jet-black"></div>
+                                    <p>Jet Black Metallic</p>
+                                    
+                                </div>
+                                <div class="color-swatch-container">
+                                    <div class="color-swatch" style="background-color: #5a5e63;" data-color="vanadium-grey"></div>
+                                    <p>Vanadium Grey </p>
+                                </div>
+                                 <div class="color-swatch-container">
+                                    <div class="color-swatch" style="background-color: #a1a1a1;" data-color="gt-silver"></div>
+                                    <p>GT Silver Metallic</p>
+
+                                </div>
+                                <div class="color-swatch-container">
+                                    <div class="color-swatch" style="background-color: #d0d0d0;" data-color="ice-grey"></div>
+                                    <p>Ice Grey Metallic</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="options-header">
+                                <h3>Bespoke Colours</h3>
+                            </div>
+                            <div class="interior-options">
+                                <div class="interior-option color-swatch-container">
+                                    <div class="interior-swatch black color-swatch" data-color="interior-black"></div>
+                                    <p> Black</p>
+                                    <div class="option-details">
+                                        
+                                        <span>₹6,000</span>
+                                    </div>
+                                </div>
+                                <div class="interior-option color-swatch-container">
+                                    <div class="interior-swatch black color-swatch" data-color="interior-black-leather"></div>
+                                    <p> Leather </p>
+                                     <div class="option-details">
+                                        <span>₹6,000</span>
+                                    </div>
+                                </div>
+                                 <div class="interior-option color-swatch-container">
+                                    <div class="interior-swatch black-beige color-swatch" data-color="interior-black-beige"></div>
+                                    <p> Black + Limestone </p>
+                                     <div class="option-details">
+                                        <span>₹6,000</span>
+                                    </div>
+                                </div>
+                                <div class="interior-option color-swatch-container">
+                                    <div class="interior-swatch black-beige color-swatch" data-color="interior-black-beige-leather"></div>
+                                    <p>Black - Limestone  </p>
+                                     <div class="option-details">
+                                        <span>₹6,000</span>
+                                    </div>
+                                </div>
+                                <div class="interior-option color-swatch-container">
+                                    <div class="interior-swatch racing-yellow color-swatch" data-color="racing-yellow"></div>
+                                    <p>Racing Yellow</p>
+                                     <div class="option-details">
+                                        <span>₹6,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="configurator-main-content">
+                    
+                    <div class="details-summary-panel">
+                        <div class="description-section options-group">
+                            <div class="options-header">
+                                <h3>Description</h3>
+                            </div>
+                            <p>The Porsche 911 Carrera is the epitome of a sports car for the everyday. It combines a rich heritage of motorsport success with cutting-edge technology, delivering an exhilarating driving experience. Its iconic silhouette is timeless, while the rear-mounted flat-six engine provides a unique and responsive feel. This model offers a perfect balance of performance, comfort, and usability, making it a legendary choice for enthusiasts worldwide. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt libero nobis eos nisi deleniti illum reiciendis? Eius aliquid eligendi quasi quis iure unde labore similique minus! Amet necessitatibus quasi temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi porro totam, nulla praesentium eligendi cumque. Nostrum itaque error, doloribus delectus reprehenderit corporis sit provident eum ad, culpa vitae libero? A incidunt dolores quod recusandae dolorem placeat dolorum, optio rem voluptatum rerum alias et, cum quisquam veniam esse, hic magni atque ipsa libero. Molestiae ipsum, amet earum est mollitia quasi aliquid excepturi expedita odit debitis reprehenderit itaque vero modi, nihil eius hic, molestias error explicabo. Vel veniam, ab illum est beatae praesentium deleniti consequuntur quae minima quod totam nam sint dignissimos cum nostrum dolorum accusantium, rem libero numquam! Ut aperiam vero fugiat deserunt quia repudiandae necessitatibus aspernatur! Repellendus dolorum aliquam totam odit maiores sapiente sit nisi dignissimos, deleniti iure voluptas nihil excepturi, itaque laudantium eius omnis accusamus nostrum! Maiores sit eveniet ullam labore alias rem voluptatem, qui, quibusdam nam sunt animi consequuntur dignissimos voluptate beatae nostrum mollitia dolore, quaerat eos provident hic quis incidunt. Cum eligendi nemo odit optio? Exercitationem laudantium doloribus sed tempora ipsa at, nihil eligendi officia consectetur fugiat sunt cumque hic natus cupiditate voluptates aut impedit in sint esse et! Soluta praesentium reprehenderit eum sapiente blanditiis maxime beatae. Non esse ipsam quisquam? Doloremque id numquam exercitationem suscipit, dicta ab consequatur ea dolores repellendus. Quos nobis aperiam alias, blanditiis fuga cupiditate accusamus consequatur doloribus autem repellendus quia provident obcaecati est atque, non odit. Magnam sapiente nobis repellendus eius saepe consequuntur laudantium perspiciatis porro enim labore, error voluptatum recusandae quasi modi repellat a animi, delectus natus quas quam eveniet voluptas iusto. Nesciunt neque dolore quia eos officia nihil distinctio exercitationem architecto ipsa aliquam provident quod, nulla nostrum, dicta quos dolorum cupiditate! Nemo, natus omnis modi tempore asperiores saepe culpa excepturi, odio reprehenderit nihil unde rerum placeat nam inventore labore odit ea sunt voluptas dicta doloribus delectus! Nobis libero molestias pariatur perferendis, consequatur voluptates sequi aliquid praesentium excepturi placeat dolor soluta, in quidem nulla quis ducimus veniam nam ullam tempore officiis. Eveniet, voluptate hic maxime nobis nostrum iste voluptatibus amet impedit maiores asperiores cumque minima dolor veritatis. Sunt, earum quod quis quo repellendus ipsam voluptate quia delectus, iure vero sapiente adipisci excepturi rem enim quasi in maiores, minima eaque modi aliquam veritatis natus voluptatem? Temporibus, cupiditate perferendis quisquam est earum nobis ipsa, eligendi inventore tempora eius hic, voluptates minus explicabo quia at cum. Dolor et rem quas debitis quo magnam repudiandae similique assumenda ab, alias aut qui, blanditiis natus sequi repellat consectetur vero facere eos voluptas in perspiciatis harum ipsum. Quae repellendus iste maiores harum, ea laboriosam illo perferendis reprehenderit, quibusdam facilis nisi? Totam dicta fugiat tenetur magni illum quasi recusandae reprehenderit praesentium nihil possimus veniam earum deserunt architecto fugit, accusantium eius laborum dolorem in minima? Dolor laborum necessitatibus labore debitis at obcaecati quia? Illum esse unde, fugit voluptates eius repudiandae aperiam cum. Voluptatem animi molestiae, facere atque debitis tenetur rem enim non deleniti, illum a voluptatibus? Inventore commodi nesciunt, dignissimos facere debitis nulla illo architecto ad consectetur enim cumque impedit iste, sequi aliquam nemo! Ea magnam beatae ut dolorem.</p>
+                        </div>
+                        <div class="summary-section">
+                            <h2 class="summary-title">Summary</h2>
+                            <h3 class="summary-subtitle">Product - 1:13 Ferrari Key Box</h3>
+                            <div class="summary-grid">
+                                <div class="summary-pricing">
+                                    <div class="summary-item">
+                                        <div class="price-label-container">
+                                            <span>Base MSRP</span>
+                                            <small>(Standard Colour)</small>
+                                        </div>
+                                        <span id="basePrice">₹30,000</span>
+                                    </div>
+                                    <div class="summary-item" id="bespoke-item" style="display: none;">
+                                        <span>Bespoke Colour</span>
+                                        <span id="bespokePrice">₹0</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>Price for Equipment</span>
+                                        <span id="equipmentPrice">₹0</span>
+                                    </div>
+                                    
+                                    <div class="summary-item" id="discount-item" style="display: none;">
+                                        <span>Discount</span>
+                                        <span id="discountPrice" style="color: green;">-₹0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-item" style="padding-top: 1rem;">
+                                <span>Quantity</span>
+                                <input type="number" id="quantityInput" value="1" min="1" style="width: 60px; text-align: center; padding: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div class="coupon-section">
+                                <input type="text" id="couponCode" placeholder="Discount Code">
+                                <button id="applyCouponBtn">Apply</button>
+                            </div>
+                            <hr class="summary-divider">
+                            <div class="summary-total">
+                                <span>Total MSRP*</span>
+                                <span class="total-price" id="totalPrice">₹30,000</span>
+                            </div>
+                            <button class="proceed-btn" id="addToCartBtn">ADD TO CART</button>
+                            <p class="summary-disclaimer">
+                                *All information is subject to change without notice. The manufacturer can accept liability arising from the use of any information contained herein. Only an actual invoice issued by...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="configurator-footer">
+        <div class="footer-left">
+            
+            <button class="text-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                Save
+            </button>
+          
+            <button class="text-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                Print build
+            </button>
+            <button class="text-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10H4l5.5-5.5M4 14h16l-5.5 5.5"></path></svg>
+                Change model
+            </button>
+        </div>
+        <div class="footer-middle">
+           
+        </div>
+        <div class="footer-right">
+            <div class="price-item">
+                <span class="price-main" id="footerCartValue">₹0</span>
+                <a href="checkout.html" class="price-subtext">Cart Value</a>
+            </div>
+            <a href="checkout.html" class="proceed-btn" style="text-decoration: none; color: white;">Proceed To Payment</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainImage = document.getElementById('mainCarImage');
+            const thumbnailGallery = document.querySelector('.thumbnail-gallery');
+            const colorSwatches = document.querySelectorAll('.car-view-panel .color-swatch');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let sliderInterval;
+            let currentImageIndex = 0;
+            let currentThumbnails = [];
+            let currentDiscount = 0; // Keep track of the discount
+
+            // Price summary elements
+            const basePriceEl = document.getElementById('basePrice');
+            const bespokeItem = document.getElementById('bespoke-item');
+            const bespokePriceEl = document.getElementById('bespokePrice');
+            const equipmentPriceEl = document.getElementById('equipmentPrice');
+            const deliveryPriceEl = document.getElementById('deliveryPrice');
+            const totalPriceEl = document.getElementById('totalPrice');
+            const footerCartValueEl = document.getElementById('footerCartValue');
+            const couponCodeEl = document.getElementById('couponCode');
+            const applyCouponBtn = document.getElementById('applyCouponBtn');
+            const discountItem = document.getElementById('discount-item');
+            const discountPriceEl = document.getElementById('discountPrice');
+            const quantityInput = document.getElementById('quantityInput');
+            const addToCartBtn = document.getElementById('addToCartBtn');
+
+            const carImageData = {
+                'ice-grey': {
+                    main: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1603584038013-611510a5c7c7?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1603584038013-611510a5c7c7?q=80&w=1964&auto=format&fit=crop'
+                       
+                    ]
+                },
+                 'black': {
+                    main: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1935&auto=format=fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1935&auto=format=fit=crop',
+                        'https://images.unsplash.com/photo-1604234879039-9788d57843a3?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1555511837-72595505fb43?q=80&w=1931&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1594070319944-7c034319a2a9?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1629450646456-001384995393?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1503736334956-4c898e3961b2?q=80&w=1974&auto=format&fit=crop'
+                    ]
+                },
+                'jet-black': {
+                    main: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1932&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1932&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1594070319944-7c034319a2a9?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1629450646456-001384995393?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1503736334956-4c898e3961b2?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1555511837-72595505fb43?q=80&w=1931&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1604234879039-9788d_57843a3?q=80&w=1964&auto=format&fit=crop'
+                    ]
+                },
+                'vanadium-grey': {
+                    main: 'https://images.unsplash.com/photo-1611799332139-935389c52c38?q=80&w=1964&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1611799332139-935389c52c38?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1611799332139-935389c52c38?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?q=80&w=1974&auto=format&fit=crop'
+                    ]
+                },
+                'gt-silver': {
+                    main: 'https://images.unsplash.com/photo-1542281286-9e0e16bb7366?q=80&w=2070&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1542281286-9e0e16bb7366?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1597690193485-3b0fb06a2f79?q=80&w=1935&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1610018874295-a7693b6f0d40?q=80&w=1935&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1542281286-9e0e16bb7366?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1597690193485-3b0fb06a2f79?q=80&w=1935&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1610018874295-a7693b6f0d40?q=80&w=1935&auto=format&fit=crop'
+                    ]
+                },
+                'white': {
+                    main: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1964&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1937&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1937&auto=format&fit=crop'
+                    ]
+                },
+                'interior-black': {
+                    main: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1553440569-994734b3636a?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1553440569-994734b3636a?q=80&w=1974&auto=format&fit=crop'
+                    ]
+                },
+                'interior-black-leather': {
+                    main: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1503736334956-4c898e3961b2?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1503736334956-4c898e3961b2?q=80&w=1974&auto=format&fit=crop'
+                    ]
+                },
+                'interior-black-beige': {
+                    main: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1552615214-a34e6e38aa42?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1603552052825-6a7456857423?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1617436447832-7a0b2a15222c?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1617436447882-2e6933554a0a?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1617436447932-afe6957d8183?q=80&w=2070&auto=format&fit=crop'
+                    ]
+                },
+                'interior-black-beige-leather': {
+                    main: 'https://images.unsplash.com/photo-1541348263662-e349232d92aa?q=80&w=1964&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1541348263662-e349232d92aa?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1554223090-7e482858144b?q=80&w=1935&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1570294644357-b723a3a474e6?q=80&w=1974&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1541348263662-e349232d92aa?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1554223090-7e482858144b?q=80&w=1935&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1570294644357-b723a3a474e6?q=80&w=1974&auto=format&fit=crop'
+                    ]
+                },
+                'racing-yellow': {
+                    main: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop',
+                    thumbnails: [
+                        'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1580274455191-1c62238fa333?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1617010019220-a9b436a4328a?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1580274455191-1c62238fa333?q=80&w=1964&auto=format&fit=crop',
+                        'https://images.unsplash.com/photo-1617010019220-a9b436a4328a?q=80&w=1964&auto=format&fit=crop'
+                    ]
+                }
+            };
+
+            function parseCurrency(str) {
+                if (typeof str !== 'string') return 0;
+                return parseFloat(str.replace(/[^0-9.-]+/g, ""));
+            }
+
+            function formatCurrency(num) {
+                return '₹' + num.toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+            }
+
+            function updateCartValue() {
+                const cart = JSON.parse(localStorage.getItem('carCart')) || [];
+                const totalCartValue = cart.reduce((total, item) => total + (item.unitPrice * item.quantity), 0);
+                if (footerCartValueEl) {
+                    footerCartValueEl.textContent = formatCurrency(totalCartValue);
+                }
+            }
+
+            function updatePriceSummary(swatch) {
+                if (swatch) { // Only update bespoke price if a swatch was clicked
+                    const swatchContainer = swatch.closest('.color-swatch-container');
+                    const priceSpan = swatchContainer.querySelector('.option-details span:last-child');
+                    
+                    let bespokePrice = 0;
+                    // Check if the priceSpan exists and is not the info-icon
+                    if (priceSpan && !priceSpan.classList.contains('info-icon')) {
+                        bespokePrice = parseCurrency(priceSpan.textContent);
+                    }
+
+                    if (bespokePrice > 0) {
+                        bespokePriceEl.textContent = formatCurrency(bespokePrice);
+                        bespokeItem.style.display = 'flex';
+                    } else {
+                        bespokePriceEl.textContent = formatCurrency(0);
+                        bespokeItem.style.display = 'none';
+                    }
+                }
+
+                // Recalculate total
+                const basePrice = parseCurrency(basePriceEl.textContent);
+                const equipmentPrice = parseCurrency(equipmentPriceEl.textContent);
+                const deliveryPrice = deliveryPriceEl ? parseCurrency(deliveryPriceEl.textContent) : 0;
+                const bespokePrice = parseCurrency(bespokePriceEl.textContent);
+                const quantity = parseInt(quantityInput.value) || 1;
+                
+                const total = (basePrice + equipmentPrice + bespokePrice) * quantity + deliveryPrice - currentDiscount;
+                totalPriceEl.textContent = formatCurrency(total);
+            }
+
+            function applyCoupon() {
+                const code = couponCodeEl.value.trim().toUpperCase();
+                const basePrice = parseCurrency(basePriceEl.textContent);
+                const equipmentPrice = parseCurrency(equipmentPriceEl.textContent);
+                const bespokePrice = parseCurrency(bespokePriceEl.textContent);
+                const quantity = parseInt(quantityInput.value) || 1;
+                const subtotal = (basePrice + equipmentPrice + bespokePrice) * quantity;
+
+                if (code === 'SAVE10') {
+                    currentDiscount = subtotal * 0.10; // 10% discount
+                    discountPriceEl.textContent = `-${formatCurrency(currentDiscount)}`;
+                    discountItem.style.display = 'flex';
+                } else {
+                    alert('Invalid coupon code.');
+                    currentDiscount = 0;
+                    discountItem.style.display = 'none';
+                }
+                updatePriceSummary(null); // Recalculate total with new discount
+            }
+
+            applyCouponBtn.addEventListener('click', applyCoupon);
+
+            addToCartBtn.addEventListener('click', function() {
+                const cart = JSON.parse(localStorage.getItem('carCart')) || [];
+                const activeSwatchEl = document.querySelector('.color-swatch-container.active .color-swatch');
+                
+                if (!activeSwatchEl) {
+                    alert('Please select a color first.');
+                    return;
+                }
+
+                const colorName = activeSwatchEl.closest('.color-swatch-container').querySelector('p').textContent;
+                
+                const basePrice = parseCurrency(basePriceEl.textContent);
+                const equipmentPrice = parseCurrency(equipmentPriceEl.textContent);
+                const bespokePrice = parseCurrency(bespokePriceEl.textContent);
+                const quantity = parseInt(quantityInput.value) || 1;
+                const unitPrice = ((basePrice + equipmentPrice + bespokePrice) * quantity - currentDiscount) / quantity;
+
+                const image = mainImage.src;
+
+                const newItem = {
+                    id: Date.now(),
+                    name: '1:13 Ferrari Key Box',
+                    color: colorName,
+                    unitPrice: unitPrice,
+                    quantity: quantity,
+                    image: image,
+                    bespokePrice: bespokePrice,
+                    basePrice: basePrice,
+                    equipmentPrice: equipmentPrice
+                };
+
+                cart.push(newItem);
+                localStorage.setItem('carCart', JSON.stringify(cart));
+                
+                alert(`${quantity} x ${newItem.name} (${colorName}) added to cart!`);
+                updateCartValue();
+            });
+
+            quantityInput.addEventListener('input', () => updatePriceSummary(null));
+
+            function startSlider() {
+                // Clear interval before starting a new one
+                if (sliderInterval) {
+                    clearInterval(sliderInterval);
+                }
+                // Only start slider if there are images to slide through
+                if (currentThumbnails && currentThumbnails.length > 1) {
+                    sliderInterval = setInterval(() => {
+                        currentImageIndex = (currentImageIndex + 1) % currentThumbnails.length;
+                        mainImage.src = currentThumbnails[currentImageIndex];
+                    }, 4000); // Change image every 3 seconds
+                }
+            }
+
+            function showNextImage() {
+                if (currentThumbnails.length === 0) return;
+                currentImageIndex = (currentImageIndex + 1) % currentThumbnails.length;
+                mainImage.src = currentThumbnails[currentImageIndex];
+                startSlider(); // Reset interval on manual change
+            }
+
+            function showPrevImage() {
+                if (currentThumbnails.length === 0) return;
+                currentImageIndex = (currentImageIndex - 1 + currentThumbnails.length) % currentThumbnails.length;
+                mainImage.src = currentThumbnails[currentImageIndex];
+                startSlider(); // Reset interval on manual change
+            }
+
+            prevBtn.addEventListener('click', showPrevImage);
+            nextBtn.addEventListener('click', showNextImage);
+
+            function updateCarView(colorKey) {
+                const colorData = carImageData[colorKey];
+                if (!colorData) return;
+
+                mainImage.src = colorData.main;
+                thumbnailGallery.innerHTML = ''; // Clear existing thumbnails
+
+                currentThumbnails = colorData.thumbnails; // FIX: Populate the thumbnails array
+                currentImageIndex = 0;
+                
+                currentThumbnails.forEach((thumbSrc, index) => {
+                    const thumbImg = document.createElement('img');
+                    thumbImg.src = thumbSrc;
+                    thumbImg.classList.add('thumbnail-image');
+                    thumbImg.style.objectFit = 'cover';
+                    thumbImg.style.cursor = 'pointer';
+
+                    thumbImg.addEventListener('click', function() {
+                        mainImage.src = this.src;
+                        currentImageIndex = index; // Update index to the clicked thumbnail
+                        startSlider(); // Restart slider from this point
+                    });
+
+                    thumbnailGallery.appendChild(thumbImg);
+                });
+                
+                startSlider(); // Initialize slider for the selected color
+            }
+
+            colorSwatches.forEach(swatch => {
+                swatch.addEventListener('click', function() {
+                    const colorKey = this.dataset.color;
+                    updateCarView(colorKey);
+                    updatePriceSummary(this);
+                    
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // De-select all other options across all groups
+                    colorSwatches.forEach(s => {
+                        s.closest('.color-swatch-container').classList.remove('active');
+                    });
+
+                    // Select the clicked option
+                    const swatchContainer = this.closest('.color-swatch-container');
+                    if (swatchContainer) {
+                        swatchContainer.classList.add('active');
+                    }
+                });
+            });
+
+            // Initialize view with the default selected color
+            const initiallyActiveSwatch = document.querySelector('.color-swatch-container.active .color-swatch');
+            if (initiallyActiveSwatch) {
+                updateCarView(initiallyActiveSwatch.dataset.color);
+                updatePriceSummary(initiallyActiveSwatch);
+            }
+            updateCartValue(); // Update cart value on
+        });
+    </script>
+    <script src="penaki.js"></script>
+
+</body>
+</html>

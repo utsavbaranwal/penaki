@@ -1,0 +1,234 @@
+body {
+    background-color: #0d0d1a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.luxury-key-box-page {
+    padding: 90px 20px 40px;
+}
+
+.luxury-key-box-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.luxury-key-box-hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    height: 400px; /* Adjust this value to control the hero image height */
+}
+
+.luxury-key-box-hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.luxury-key-box-hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    white-space: nowrap;
+    text-transform: lowercase;
+}
+
+.luxury-key-box-description {
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.size-title {
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.feature-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.feature-section:hover {
+    transform: scale(1.02);
+}
+
+.feature-section.alt {
+    flex-direction: row-reverse;
+}
+
+.feature-image-container {
+    flex: 1;
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+}
+
+.feature-image-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.image-caption {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.feature-text p {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.luxury-key-box-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.luxury-key-box-card {
+    background-color: transparent;
+    text-align: center;
+}
+
+.luxury-key-box-card-image-container {
+    width: 100%;
+    margin-bottom: 15px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.luxury-key-box-card-image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.luxury-key-box-card-title {
+    padding: 10px 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 10rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+    user-select: none;
+    padding-left: 40px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+    .luxury-key-box-page {
+        padding-top: 7rem;
+    }
+
+    .luxury-key-box-hero {
+        height: 300px;
+        border-radius: 30px;
+    }
+
+    .luxury-key-box-hero-title {
+        font-size: 3rem;
+        white-space: normal;
+        text-align: center;
+        width: 80%;
+    }
+
+    .luxury-key-box-description {
+        font-size: 0.9rem;
+    }
+
+    .size-title {
+        font-size: 4rem;
+    }
+
+    .feature-section,
+    .feature-section.alt {
+        flex-direction: column;
+    }
+
+    .feature-text {
+        text-align: center;
+    }
+
+    .feature-text h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .luxury-key-box-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .vertical-text {
+        writing-mode: horizontal-tb;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 3rem;
+        padding-left: 0;
+        height: auto;
+        white-space: normal;
+    }
+}

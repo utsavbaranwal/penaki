@@ -1,0 +1,119 @@
+body {
+    background-color: #0d0d1a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.selModelKB-page {
+    padding: 90px 20px 40px;
+}
+
+.selModelKB-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selModelKB-hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    height: 500px; /* Adjust this value to control the hero image height */
+}
+
+.selModelKB-hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.selModelKB-hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    white-space: nowrap;
+    text-transform: none;
+}
+
+.selModelKB-description {
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.selModelKB-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 100%;
+}
+
+.selModelKB-card {
+    background-color: transparent;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.selModelKB-card-image-container {
+    width: 100%;
+    margin-bottom: 15px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.selModelKB-card-image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.selModelKB-card-title {
+    padding: 10px 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .selModelKB-page {
+        padding-top: 7rem;
+    }
+    .selModelKB-hero-title {
+        font-size: 3rem;
+    }
+    .selModelKB-description {
+        font-size: 0.9rem;
+    }
+    .selModelKB-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .selModelKB-hero-title {
+        font-size: 2rem;
+    }
+    .selModelKB-description {
+        font-size: 0.8rem;
+    }
+    .selModelKB-grid {
+        grid-template-columns: 1fr;
+    }
+}

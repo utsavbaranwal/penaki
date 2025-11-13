@@ -1,0 +1,178 @@
+body {
+    background-color: #0d0d1a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.watch-box-page {
+    padding: 90px 20px 40px;
+}
+
+.watch-box-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.watch-box-hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.watch-box-hero img {
+    width: 100%;
+    display: block;
+    filter: brightness(0.6);
+}
+
+.watch-box-hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    white-space: nowrap;
+    text-transform: lowercase;
+}
+
+.watch-box-description {
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.size-title {
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.feature-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.feature-section.alt {
+    flex-direction: row-reverse;
+}
+
+.feature-image-container {
+    flex: 1;
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+}
+
+.feature-image-container img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.feature-image-container a:hover img {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.feature-text p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.watch-box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    width: 100%;
+}
+
+.watch-box-card {
+    background-color: transparent;
+    text-align: center;
+}
+
+.watch-box-card-image-container {
+    width: 100%;
+    margin-bottom: 15px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.watch-box-card-image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.watch-box-card-title {
+    padding: 10px 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .watch-box-page {
+        padding-top: 7rem;
+    }
+    .watch-box-hero-title {
+        font-size: 2.5rem;
+        white-space: normal;
+        width: 90%;
+        text-align: center;
+    }
+    .watch-box-description {
+        font-size: 0.9rem;
+    }
+    .watch-box-grid {
+        grid-template-columns: 1fr;
+    }
+    .size-title {
+        font-size: 3rem;
+    }
+    .feature-section, .feature-section.alt {
+        flex-direction: column;
+    }
+    .feature-text {
+        text-align: center;
+    }
+    .feature-text h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
