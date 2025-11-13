@@ -315,7 +315,7 @@
 
                 try {
                     // Step 1: Create a Razorpay Order from your server
-                    const createOrderResponse = await fetch('http://127.0.0.1:5502/api/orders/create', {
+                    const createOrderResponse = await fetch('https://penaki-luxury.onrender.com/api/orders/create', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -341,7 +341,7 @@
                         "handler": async function (response){
                             // Step 3: Verify the payment and place the order
                             try {
-                                const verifyResponse = await fetch('http://127.0.0.1:5502/api/orders/verify', {
+                                const verifyResponse = await fetch('https://penaki-luxury.onrender.com/api/orders/verify', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
