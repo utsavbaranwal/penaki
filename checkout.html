@@ -42,7 +42,7 @@
     </header>
 
     <main class="checkout-container">
-        <h1>Cart</h1>
+        <h1>My Cart</h1>
         <div class="checkout-layout">
             <div class="customer-details">
                 <h2>Shipping Information</h2>
@@ -355,7 +355,7 @@
                                 });
 
                                 if (verifyResponse.ok) {
-                                    alert('Order placed successfully!');
+                                    alert('Order placed successfully!! We will reach you via Email shortly');
                                     localStorage.removeItem('carCart');
                                     window.location.href = 'index.html';
                                 } else {
