@@ -37,6 +37,17 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
+// Add this route to serve the sitemap
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'sitemap.xml'));
+});
+
+// This handler will catch requests for pages like /products, /checkout, etc.
+// It must be placed after the static middleware and any specific API routes.
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '..', 'index.html'));
+// });
+
 
 // Start the server
 app.listen(port, () => {
