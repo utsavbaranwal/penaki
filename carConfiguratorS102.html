@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Configurator - Penaki Luxury</title>
+    <link rel="icon" type="image/png" href="img/texture logo.png">
     <link rel="stylesheet" href="css/penaki.css">
     <link rel="stylesheet" href="css/carConfiguratorS102.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,33 +71,29 @@
                             </div>
                             <div class="color-options">
                                 <div class="color-swatch-container active">
-                                    <div class="color-swatch" style="background-color: white; border: 1px solid #ccc;" data-color="white"></div>
-                                    <p>White</p>
+                                    <div class="color-swatch" style="background-color: #6B0686; border: 1px solid #ccc;" data-color="viola-parsifae"></div>
+                                    <p>Viola Parsifae</p>
                                     
                                 </div>
                                 <div class="color-swatch-container">
-                                    <div class="color-swatch" style="background-color: black;" data-color="black"></div>
-                                    <p>Black</p>
+                                    <div class="color-swatch" style="background-color: #C10001;" data-color="rosso-bia"></div>
+                                    <p>Rosso Bia</p>
                                 </div>
                                 <div class="color-swatch-container">
-                                    <div class="color-swatch" style="background-color: #222;" data-color="jet-black"></div>
-                                    <p>Jet Black Metallic</p>
+                                    <div class="color-swatch" style="background-color: #707176;" data-color="grigio"></div>
+                                    <p>Grigio</p>
                                     
                                 </div>
                                 <div class="color-swatch-container">
-                                    <div class="color-swatch" style="background-color: #5a5e63;" data-color="vanadium-grey"></div>
-                                    <p>Vanadium Grey </p>
+                                    <div class="color-swatch" style="background-color: #E0C500;" data-color="gialo-horus"></div>
+                                    <p>Gialo Horus </p>
                                 </div>
                                  <div class="color-swatch-container">
-                                    <div class="color-swatch" style="background-color: #a1a1a1;" data-color="gt-silver"></div>
-                                    <p>GT Silver Metallic</p>
+                                    <div class="color-swatch" style="background-color: #FB6445;" data-color="aracio-agros"></div>
+                                    <p>Aracio Agros</p>
 
                                 </div>
-                                <div class="color-swatch-container">
-                                    <div class="color-swatch" style="background-color: #d0d0d0;" data-color="ice-grey"></div>
-                                    <p>Ice Grey Metallic</p>
-                                    
-                                </div>
+                                
                             </div>
                             <div class="options-header">
                                 <h3>Bespoke Colours</h3>
@@ -258,73 +255,58 @@
             const addToCartBtn = document.getElementById('addToCartBtn');
 
             const carImageData = {
-                'ice-grey': {
-                    main: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
+                'viola-parsifae': {
+                    main: 'img/lb_viop1.png',
                     thumbnails: [
-                        'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1974&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1603584038013-611510a5c7c7?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=1974&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1603584038013-611510a5c7c7?q=80&w=1964&auto=format&fit=crop'
-                       
+                        'img/lb_viop1.png',
+                      'img/lb_viop3.png',
+                      'img/lb_viop4.png',
+                      'img/lb_viop5.png',
+                      'img/lb_viop2.png',
                     ]
                 },
-                 'black': {
-                    main: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1935&auto=format=fit=crop',
+                 'rosso-bia': {
+                    main: 'img/lb_rosb1.png',
                     thumbnails: [
-                        'https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1935&auto=format=fit=crop',
-                        'https://images.unsplash.com/photo-1604234879039-9788d57843a3?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1555511837-72595505fb43?q=80&w=1931&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1594070319944-7c034319a2a9?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1629450646456-001384995393?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1503736334956-4c898e3961b2?q=80&w=1974&auto=format&fit=crop'
+                          'img/lb_rosb6.png',
+                        'img/lb_rosb1.png',
+                        'img/lb_rosb2.png',
+                        'img/lb_rosb4.png',
+                        'img/lb_rosb3.png',
+                        'img/lb_rosb5.png',
+                      
                     ]
                 },
-                'jet-black': {
-                    main: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1932&auto=format&fit=crop',
+                'grigio': {
+                    main: 'img/lb_grig1.png',
                     thumbnails: [
-                        'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1932&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1594070319944-7c034319a2a9?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1629450646456-001384995393?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1503736334956-4c898e3961b2?q=80&w=1974&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1555511837-72595505fb43?q=80&w=1931&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1604234879039-9788d_57843a3?q=80&w=1964&auto=format&fit=crop'
+                        'img/lb_grig1.png',
+                        'img/lb_grig2.png',
+                        'img/lb_grig3.png',
+                        'img/lb_grig4.png',
                     ]
                 },
-                'vanadium-grey': {
-                    main: 'https://images.unsplash.com/photo-1611799332139-935389c52c38?q=80&w=1964&auto=format&fit=crop',
+                'gialo-horus': {
+                    main: 'img/lb_giho1.png',
                     thumbnails: [
-                        'https://images.unsplash.com/photo-1611799332139-935389c52c38?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=2070&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?q=80&w=1974&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1611799332139-935389c52c38?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=2070&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?q=80&w=1974&auto=format&fit=crop'
+                        'img/lb_giho1.png',
+                        'img/lb_giho3.png',
+                        'img/lb_giho4.png',
+                        'img/lb_giho2.png',
                     ]
                 },
-                'gt-silver': {
-                    main: 'https://images.unsplash.com/photo-1542281286-9e0e16bb7366?q=80&w=2070&auto=format&fit=crop',
+                'aracio-agros': {
+                    main: 'img/lb_arag1.png',
                     thumbnails: [
-                        'https://images.unsplash.com/photo-1542281286-9e0e16bb7366?q=80&w=2070&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1597690193485-3b0fb06a2f79?q=80&w=1935&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1610018874295-a7693b6f0d40?q=80&w=1935&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1542281286-9e0e16bb7366?q=80&w=2070&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1597690193485-3b0fb06a2f79?q=80&w=1935&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1610018874295-a7693b6f0d40?q=80&w=1935&auto=format&fit=crop'
+                        'img/lb_arag1.png',
+                        'img/lb_arag2.png',
+                        'img/lb_arag3.png',
+                        'img/lb_arag4.png',
+                        'img/lb_arag5.png'
+                        
                     ]
                 },
-                'white': {
-                    main: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1964&auto=format&fit=crop',
-                    thumbnails: [
-                        'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1937&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=1964&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop',
-                        'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1937&auto=format&fit=crop'
-                    ]
-                },
+                
                 'interior-black': {
                     main: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop',
                     thumbnails: [
