@@ -45,6 +45,27 @@
     <main class="checkout-container">
         <h1>My Cart</h1>
         <div class="checkout-layout">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="cartItemsContainer">
+                    <!-- Cart items will be injected here by JS -->
+                </div>
+                <div class="summary-totals">
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="summarySubtotal">₹0</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Delivery & Handling</span>
+                        <span id="summaryDelivery">₹1,995</span>
+                    </div>
+                    <hr>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span id="summaryTotal">₹0</span>
+                    </div>
+                </div>
+            </div>
             <div class="customer-details">
                 <h2>Shipping Information</h2>
                 <form id="checkoutForm">
@@ -86,29 +107,8 @@
                             <input type="text" id="state" name="state" required>
                         </div>
                     </div>
+                    <button type="submit" class="proceed-btn">Place Order</button>
                 </form>
-            </div>
-            <div class="order-summary">
-                <h2>Order Summary</h2>
-                <div id="cartItemsContainer">
-                    <!-- Cart items will be injected here by JS -->
-                </div>
-                <div class="summary-totals">
-                    <div class="summary-line">
-                        <span>Subtotal</span>
-                        <span id="summarySubtotal">₹0</span>
-                    </div>
-                    <div class="summary-line">
-                        <span>Delivery & Handling</span>
-                        <span id="summaryDelivery">₹1,995</span>
-                    </div>
-                    <hr>
-                    <div class="summary-line total">
-                        <span>Total</span>
-                        <span id="summaryTotal">₹0</span>
-                    </div>
-                </div>
-                <button type="submit" form="checkoutForm" class="proceed-btn">Place Order</button>
             </div>
         </div>
     </main>

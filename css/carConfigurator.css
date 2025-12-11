@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     flex: 1;
     gap: 1rem;
-    height: 60vh;
+    /* height: 60vh; */ /* Remove height from the container */
 }
 
 .main-car-image {
@@ -42,8 +42,8 @@ body {
     background-color: #f0f0f0; /* Light grey background for image */
     border-radius: 8px;
     overflow: hidden;
-    /* height: 60vh; */
-    flex: 1;
+    height: 60vh; /* Set height to match the color panel */
+    /* flex: 1; */ /* No longer needed with a fixed height */
     min-height: 0;
 }
 
@@ -322,16 +322,16 @@ body {
 
 .details-summary-panel {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem; /* Adjusted to match the gap of the section above */
     align-items: flex-start;
 }
 
 .details-summary-panel > .description-section {
-    flex: 2;
+    flex: 1; /* Makes this section flexible, matching the image gallery */
 }
 
 .details-summary-panel > .summary-section {
-    flex: 1;
+    flex: 0 0 450px; /* Sets a fixed width, matching the color panel */
     position: sticky;
     top: 120px;
 }
@@ -610,7 +610,8 @@ header nav a {
     }
 
     .main-car-image {
-        height: 50vh; /* Adjust height for vertical layout */
+        /* height: 50vh; */ /* Adjust height for vertical layout */
+        aspect-ratio: 3 / 2;
     }
 
     .thumbnail-gallery {
@@ -659,7 +660,8 @@ header nav a {
     }
 
     .main-car-image {
-        height: 40vh; /* Adjust image height for smaller screens */
+        /* height: 40vh; */ /* Adjust image height for smaller screens */
+        aspect-ratio: 4 / 3;
     }
 
     .footer-left .text-btn {

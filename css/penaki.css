@@ -494,7 +494,7 @@ nav a:hover {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Changed from space-between */
     align-items: flex-start;
     text-align: left;
     gap: 2rem;
